@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Quang Trần App</title>
+		<!-- include css -->
+		<link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- include javascript -->
+		<script src="libs/angular.min.js"></script>
+		<script src="libs/angular-route.js"></script>
+		<script src="libs/jquery-2.1.1.min.js"></script>
+		<script src="libs/bootstrap.min.js"></script>
+		
+		<!-- include base js -->
+		<script src="controller/app.js"></script>
+		<script src="route.js"></script>
+		
+		<!-- include controller -->
+		<script src="controller/listCtrl.js"></script>
+		<script src="controller/singleCtrl.js"></script>
+	</head>
+	<body>
+		<p>Hi Quang Tran</p>
+		<div ng-view></div>
+	</body>
+</html>
