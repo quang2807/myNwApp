@@ -5,7 +5,7 @@ myApp.config(function ($routeProvider, $locationProvider)
                 templateUrl: 'views/list.html',
                 controller: 'listCtrl'
             })
-            .when('/list/treated', {
+            .when('/single/:id', {
                 templateUrl: 'views/single.html',
                 controller: 'singleCtrl'
             })

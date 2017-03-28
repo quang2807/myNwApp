@@ -1,1 +1,6 @@
-<p>Day la list</p>
+<ul>
+    <li ng-repeat="(key, item) in list">
+        <a href="#/single/{{key}}">{{item.name}}</a>
+    </li>
+</ul>
+<a href="#/single/0">Thêm mới</a>

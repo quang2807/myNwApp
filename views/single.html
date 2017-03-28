@@ -1,0 +1,23 @@
+<div>
+    <label>Họ và tên:</label>
+    <div>
+        <input type="text" ng-model="name"/>
+    </div>
+</div>
+<div>
+    <label>Tuổi:</label>
+    <div>
+        <input type="text" ng-model="age"/>
+    </div>
+</div>
+<div>
+    <label>Giới tính:</label>
+    <div>
+        <select ng-model="sex">
+            <option ng-repeat="(key, name) in listSex" value="{{key}}">{{name}}</option>
+        </select>
+    </div>
+</div>
+
+<input type="button" value="Cập nhật" ng-click="action.update()"/>
+<a href="#/">Quay lại</a>
