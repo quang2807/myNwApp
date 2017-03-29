@@ -1,9 +1,19 @@
-myApp.controller('listCtrl', function ($scope, $apply, $rootScope, $rootScope){
-    
-    $rootScope.list = [
-        {name: "Quang", age: "27", sex: 'male'},
-        {name: "Ngoc", age: "32", sex: 'female'},
-        {name: "Thinh", age: "64", sex: 'male'},
-    ];
-    
+myApp.controller('listCtrl', function ($scope, $apply, $rootScope, $rootScope, $myFS) {
+
+    $scope.listDataFilePath = 'jsonData/list.json';
+    $scope.data = {
+        getList: function () {
+            $myFS.readFile($scope.listDataFilePath, function (err, data) {
+                if (err) {
+                    return console.error(err);
+                }
+                console.log(data);
+                $apply(function () {
+                    $rootScope.list = JSON.parse(data);
+                });
+            });
+        }
+    };
+
+    $scope.data.getList();
 });

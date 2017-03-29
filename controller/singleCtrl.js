@@ -16,6 +16,8 @@ myApp.controller('singleCtrl', function ($scope, $apply, $rootScope, $routeParam
                 age: '',
                 sex: 'male'
             };
+            console.log($rootScope.list);
+            console.log(data);
             $apply(function () {
                 $scope.name = data.name;
                 $scope.age = data.age;
